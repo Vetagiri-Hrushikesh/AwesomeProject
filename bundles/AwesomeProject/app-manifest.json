@@ -1,0 +1,26 @@
+{
+  "appName": "AwesomeProject",
+  "version": "1.0.0",
+  "bundlePath": "complete-app.bundle",
+  "assetsPath": "./",
+  "nativeModules": [
+    "react-native-image-picker",
+    "react-native-permissions"
+  ],
+  "permissions": [
+    "android.permission.CAMERA",
+    "android.permission.READ_EXTERNAL_STORAGE",
+    "android.permission.WRITE_EXTERNAL_STORAGE",
+    "android.permission.READ_MEDIA_IMAGES",
+    "android.permission.READ_MEDIA_VIDEO",
+    "android.permission.ACCESS_FINE_LOCATION",
+    "android.permission.ACCESS_COARSE_LOCATION"
+  ],
+  "dependencies": {
+    "react-native-image-picker": "^7.2.3",
+    "react-native-permissions": "^4.1.5"
+  },
+  "entryPoint": "index.js",
+  "platform": "android",
+  "createdAt": "2024-08-02T14:30:00Z"
+} 
