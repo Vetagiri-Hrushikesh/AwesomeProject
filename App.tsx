@@ -108,26 +108,25 @@ function App() {
         ))}
       </View>
 
-      <Pressable
-        style={[styles.galleryButton, { backgroundColor: isDarkMode ? '#4CAF50' : '#4CAF50' }]}
-        onPress={() => handleAction('Add Photo')}
-      >
-        <Text style={styles.galleryButtonText}>📸 Add New Photo</Text>
-      </Pressable>
+      <View style={styles.buttonContainer}>
+        <Text style={[styles.gallerySubtitle, { color: isDarkMode ? '#ccc' : '#666', textAlign: 'center', marginBottom: 20 }]}>
+          Test Native Features
+        </Text>
+        
+        <Pressable
+          style={[styles.galleryButton, { backgroundColor: isDarkMode ? '#2196F3' : '#2196F3' }]}
+          onPress={() => handleAction('Camera Test')}
+        >
+          <Text style={styles.galleryButtonText}>📱 Test Camera Access</Text>
+        </Pressable>
 
-      <Pressable
-        style={[styles.galleryButton, { backgroundColor: isDarkMode ? '#2196F3' : '#2196F3', marginTop: 10 }]}
-        onPress={() => handleAction('Camera Test')}
-      >
-        <Text style={styles.galleryButtonText}>📱 Test Camera Access</Text>
-      </Pressable>
-
-      <Pressable
-        style={[styles.galleryButton, { backgroundColor: isDarkMode ? '#FF9800' : '#FF9800', marginTop: 10 }]}
-        onPress={() => handleAction('Gallery Test')}
-      >
-        <Text style={styles.galleryButtonText}>🖼️ Test Gallery Access</Text>
-      </Pressable>
+        <Pressable
+          style={[styles.galleryButton, { backgroundColor: isDarkMode ? '#FF9800' : '#FF9800', marginTop: 10 }]}
+          onPress={() => handleAction('Gallery Test')}
+        >
+          <Text style={styles.galleryButtonText}>🖼️ Test Gallery Access</Text>
+        </Pressable>
+      </View>
     </ScrollView>
   );
 
@@ -294,6 +293,11 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     fontWeight: '600',
+  },
+  buttonContainer: {
+    marginTop: 20,
+    paddingHorizontal: 20,
+    paddingBottom: 100, // Add bottom padding to avoid bottom navigation
   },
   settingsHeader: {
     padding: 20,
